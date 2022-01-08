@@ -1,0 +1,8 @@
+spring:
+  profiles:
+    active: prod
+  application:
+    name: Profiles
+
+app:
+  message: This is the primary Application Property from ${spring.application.name}

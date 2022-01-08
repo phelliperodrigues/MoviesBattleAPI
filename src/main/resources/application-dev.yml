@@ -1,0 +1,54 @@
+app:
+  message: This is the properties file for the ${spring.application.name} specific to DEV Enveroment
+  swagger:
+    host: localhost:8080
+api:
+  security:
+    enable-https: false
+spring:
+  application:
+    name: movies-battle-api
+  datasource:
+    url: jdbc:h2:mem:testdb;IFEXISTS=FALSE;
+    driverClassName: org.h2.Driver
+    username: sa
+    password: sa
+  h2:
+    console:
+      enabled: true
+      path: /h2
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    properties:api:
+      hibernate:
+        dialect: org.hibernate.dialect.H2Dialect
+        format_sql: true
+        show-sql: true
+    hibernate:
+      ddl-auto: none
+  liquibase:
+    change-log: classpath:db/master.xml
+cors:
+  headers:
+    - Origin
+    - Accept
+    - Accept-Encoding
+    - Accept-Language
+    - Content-Type
+    - Content-Length
+    - Content-Disposition
+    - Authorization
+    - X-Requested-With
+    - ETag
+    - If-Match
+    - If-Modified-Since
+    - If-None-Match
+    - Last-Modified
+    - Location
+    - Referer
+    - User-Agent
+    - Host
+    - Connection
+    - omni-autenticacao
+  protected-paths:
+    - /**

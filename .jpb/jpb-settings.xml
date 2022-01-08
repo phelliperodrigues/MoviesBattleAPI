@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DatabaseMigrationSettings" mainChangeLogDir="db/changelog" mainChangeLogName="#date(&quot;yyyy&quot;)#date(&quot;MM&quot;)#date(&quot;dd&quot;)#date(&quot;hh&quot;)#date(&quot;mm&quot;)#date(&quot;ss&quot;)-" secondaryChangeLogName="#date(&quot;yyyy&quot;)#date(&quot;MM&quot;)#date(&quot;dd&quot;)#date(&quot;hh&quot;)#date(&quot;mm&quot;)#date(&quot;ss&quot;)-">
+    <database-infos>
+      <database-info>
+        <option name="enabled" value="true" />
+        <dbms-id>postgres</dbms-id>
+      </database-info>
+    </database-infos>
+  </component>
+</project>
