@@ -2,7 +2,7 @@ package dev.phelliperodrigues.moviebattle.domain.usecase;
 
 import dev.phelliperodrigues.moviebattle.domain.interfaces.dto.user.UserDTO;
 import dev.phelliperodrigues.moviebattle.domain.interfaces.facade.UserRepositoryFacade;
-import dev.phelliperodrigues.moviebattle.infrastructure.db.h2.entities.SystemUser;
+import dev.phelliperodrigues.moviebattle.infrastructure.db.h2.entities.UserSystem;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -27,7 +27,7 @@ public class LoadUserByUsername implements UserDetailsService {
         return new UserDTO(user, getRoles(user));
     }
 
-    private Collection<? extends GrantedAuthority> getRoles(SystemUser users) {
+    private Collection<? extends GrantedAuthority> getRoles(UserSystem users) {
         Set<SimpleGrantedAuthority> authorities = new HashSet<>();
         users.getRoles().forEach(role -> authorities.add(new SimpleGrantedAuthority((role.getDescription().toUpperCase()))));
         return authorities;

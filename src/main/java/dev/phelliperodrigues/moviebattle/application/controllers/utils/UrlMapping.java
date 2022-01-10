@@ -8,10 +8,10 @@ public interface UrlMapping {
     String AUTH_API = ROOT_URI_V1 + "/tokens";
     String REVOKE_TOKEN_URI =  "/revoke";
 
-    String GAME_API = ROOT_URI_V1 + "/games";
+    String MATCHER_API = ROOT_URI_V1 + "/matchers";
     String RANK_URI =  "/ranks/top/{value}";
-    String START_GAME_URI =  "/start";
-    String END_GAME_URI =  "/end";
-    String CHOICE_API =  "/choices";
+    String START_MATCH_URI =  "/start";
+    String END_MATCH_URI =  "/end";
+    String QUIZ_MATCH_URI =  "/choices/{matchId}/{quizId}";
 
 }

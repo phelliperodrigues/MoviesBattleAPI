@@ -1,6 +1,6 @@
 package dev.phelliperodrigues.moviebattle.domain.interfaces.dto.user;
 
-import dev.phelliperodrigues.moviebattle.infrastructure.db.h2.entities.SystemUser;
+import dev.phelliperodrigues.moviebattle.infrastructure.db.h2.entities.UserSystem;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import org.springframework.security.core.GrantedAuthority;
@@ -11,9 +11,9 @@ import java.util.Collection;
 @Getter
 @EqualsAndHashCode(callSuper = true)
 public class UserDTO extends User {
-    private final SystemUser user;
+    private final UserSystem user;
 
-    public UserDTO(SystemUser users, Collection<? extends GrantedAuthority> authorities) {
+    public UserDTO(UserSystem users, Collection<? extends GrantedAuthority> authorities) {
         super(users.getMail(), users.getPassword(), authorities);
         this.user = users;
     }

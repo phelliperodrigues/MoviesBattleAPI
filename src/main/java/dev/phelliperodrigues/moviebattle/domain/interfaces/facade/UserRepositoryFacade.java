@@ -1,9 +1,9 @@
 package dev.phelliperodrigues.moviebattle.domain.interfaces.facade;
 
-import dev.phelliperodrigues.moviebattle.infrastructure.db.h2.entities.SystemUser;
+import dev.phelliperodrigues.moviebattle.infrastructure.db.h2.entities.UserSystem;
 
 import java.util.Optional;
 
 public interface UserRepositoryFacade {
-    Optional<SystemUser> findByMail(String mail);
+    Optional<UserSystem> findByMail(String mail);
 }

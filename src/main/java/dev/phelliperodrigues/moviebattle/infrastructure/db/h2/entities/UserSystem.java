@@ -13,7 +13,7 @@ import java.util.List;
 @ToString
 @NoArgsConstructor
 @AllArgsConstructor
-public class SystemUser implements Serializable {
+public class UserSystem implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long code;
@@ -26,4 +26,11 @@ public class SystemUser implements Serializable {
             inverseJoinColumns = @JoinColumn(name = "roles_code")
     )
     private List<Role> roles;
+
+    @OneToOne(mappedBy = "user")
+    private Player player;
+
+    public boolean existsPlayer() {
+        return this.player != null;
+    }
 }
