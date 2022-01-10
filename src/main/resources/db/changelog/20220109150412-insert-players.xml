@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd">
+
+    <changeSet id="20220108030116-1" author="Phellipe Rodrigues">
+        <insert tableName="players">
+            <column name="nickname" value="phellipe"/>
+            <column name="playing" value="false" />
+            <column name="user_code" value="1" />
+            <column name="score" value="0.0" />
+        </insert>
+    </changeSet>
+</databaseChangeLog>
